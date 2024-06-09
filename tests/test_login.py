@@ -1,9 +1,7 @@
-import sys
-sys.path.append('D:\\PyProjects\\Sprint_5')
 from data import Person
-from locators import MainPageLocators, AuthPageLocators, RegistrationPageLocators, RecoverPageLocators
+from locators import Header, MainPageLocators, AuthPageLocators, RegistrationPageLocators, RecoverPageLocators
 from urls import URLS
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -16,7 +14,7 @@ class TestLogin:
         driver.find_element(*AuthPageLocators.password_input).send_keys(Person.password)
         driver.find_element(*AuthPageLocators.login_account_btn).click()
 
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(MainPageLocators.place_order_button))
+        WebDriverWait(driver, 10).until(ec.visibility_of_element_located(MainPageLocators.place_order_button))
         order_btn = driver.find_element(*MainPageLocators.place_order_button).text
 
         assert (driver.current_url == URLS.MAIN_PAGE_URL) and (order_btn == 'Оформить заказ')
@@ -24,12 +22,12 @@ class TestLogin:
     def test_login_in_personal_account_btn_success(self, driver):
         """Вход в личный кабинет через кнопку 'Личный кабинет' на главной странице"""
         driver.get(URLS.MAIN_PAGE_URL)
-        driver.find_element(*MainPageLocators.personal_account_btn).click()
+        driver.find_element(*Header.personal_account_btn).click()
         driver.find_element(*AuthPageLocators.email_input).send_keys(Person.email)
         driver.find_element(*AuthPageLocators.password_input).send_keys(Person.password)
         driver.find_element(*AuthPageLocators.login_account_btn).click()
 
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(MainPageLocators.place_order_button))
+        WebDriverWait(driver, 10).until(ec.visibility_of_element_located(MainPageLocators.place_order_button))
         order_btn = driver.find_element(*MainPageLocators.place_order_button).text
 
         assert (driver.current_url == URLS.MAIN_PAGE_URL) and (order_btn == 'Оформить заказ')
@@ -42,7 +40,7 @@ class TestLogin:
         driver.find_element(*AuthPageLocators.password_input).send_keys(Person.password)
         driver.find_element(*AuthPageLocators.login_account_btn).click()
 
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(MainPageLocators.place_order_button))
+        WebDriverWait(driver, 10).until(ec.visibility_of_element_located(MainPageLocators.place_order_button))
         order_btn = driver.find_element(*MainPageLocators.place_order_button).text
 
         assert (driver.current_url == URLS.MAIN_PAGE_URL) and (order_btn == 'Оформить заказ')
@@ -55,7 +53,7 @@ class TestLogin:
         driver.find_element(*AuthPageLocators.password_input).send_keys(Person.password)
         driver.find_element(*AuthPageLocators.login_account_btn).click()
 
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(MainPageLocators.place_order_button))
+        WebDriverWait(driver, 10).until(ec.visibility_of_element_located(MainPageLocators.place_order_button))
         order_btn = driver.find_element(*MainPageLocators.place_order_button).text
 
         assert (driver.current_url == URLS.MAIN_PAGE_URL) and (order_btn == 'Оформить заказ')

@@ -1,5 +1,3 @@
-import sys
-sys.path.append('D:\\PyProjects\\Sprint_5')
 from data import Person, RandomData
 from locators import RegistrationPageLocators, AuthPageLocators
 from urls import *

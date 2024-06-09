@@ -1,5 +1,3 @@
-import sys
-sys.path.append('D:\\PyProjects\\Sprint_5')
 from selenium import webdriver
 import pytest
 from locators import MainPageLocators, AuthPageLocators

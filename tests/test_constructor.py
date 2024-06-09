@@ -1,5 +1,3 @@
-import sys
-sys.path.append('D:\\PyProjects\\Sprint_5')
 from locators import MainPageLocators
 from urls import URLS
 

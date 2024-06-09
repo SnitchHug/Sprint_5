@@ -1,6 +1,14 @@
 from selenium.webdriver.common.by import By
 
 
+class Header:
+    """Общая шапка для всех страниц"""
+    constructor_btn = (By.XPATH, ".//p[text() = 'Конструктор']")  # Кнопка конструктор
+    order_feed_btn = (By.XPATH, ".//p[text() = 'Лента Заказов']")  # Кнопка лента заказов
+    logo_btn = (By.XPATH, ".//div[@class = 'AppHeader_header__logo__2D0X2']")  # Кнопка главной страницы сайта
+    personal_account_btn = (By.XPATH, ".//p[text() = 'Личный Кабинет']")  # Кнопка личного кабинета
+
+
 class MainPageLocators:
     """Главная страница"""
     main_form = (By.XPATH, ".//main[@class = 'App_componentContainer__2JC2W']")  # Форма главной страницы сайта
@@ -32,10 +40,6 @@ class AuthPageLocators:
     login_account_btn = (By.XPATH, "//button[text() = 'Войти']")  # Кнопка войти
     registration_btn = (By.XPATH, "//a[text() = 'Зарегистрироваться']")  # Кнопка зарегистрироваться
     recover_btn = (By.XPATH, "//a[text() = 'Восстановить пароль']")  # Кнопка восстановить пароль
-    constructor_btn = (By.XPATH, ".//p[text() = 'Конструктор']")  # Кнопка конструктор
-    order_feed_btn = (By.XPATH, ".//p[text() = 'Лента Заказов']")  # Кнопка лента заказов
-    logo_btn = (By.XPATH, ".//div[@class = 'AppHeader_header__logo__2D0X2']")  # Кнопка главной страницы сайта
-    personal_account_btn = (By.XPATH, ".//p[text() = 'Личный Кабинет']")  # Кнопка личного кабинета
 
 
 class RegistrationPageLocators:
@@ -45,10 +49,6 @@ class RegistrationPageLocators:
     password_input = (By.XPATH, ".//input[@name = 'Пароль']")  # Поле ввода пароля
     registration_btn = (By.XPATH, ".//button[text() = 'Зарегистрироваться']")  # Кнопка зарегистрироваться
     login_account_btn = (By.XPATH, ".//a[text() = 'Войти']")  # Кнопка войти
-    constructor_btn = (By.XPATH, ".//p[text() = 'Конструктор']")  # Кнопка конструктор
-    order_feed_btn = (By.XPATH, ".//p[text() = 'Лента Заказов']")  # Кнопка лента заказов
-    logo_btn = (By.XPATH, ".//div[@class = 'AppHeader_header__logo__2D0X2']")  # Кнопка главной страницы сайта
-    personal_account_btn = (By.XPATH, ".//p[text() = 'Личный Кабинет']")  # Кнопка личного кабинета
     error_message_double_reg = (
         By.XPATH, ".//p[text() = 'Такой пользователь уже существует']")  # Ошибка при повторной регистрации
     error_message_incorrect_password = (
@@ -60,10 +60,6 @@ class RecoverPageLocators:
     email_input = (By.XPATH, ".//label[text() = 'Email']")  # Поле ввода email
     recover_btn = (By.XPATH, ".//button[text() = 'Восстановить']")  # Кнопка восстановить
     login_account_btn = (By.XPATH, ".//a[text() = 'Войти']")  # Кнопка войти
-    constructor_btn = (By.XPATH, ".//p[text() = 'Конструктор']")  # Кнопка конструктор
-    order_feed_btn = (By.XPATH, ".//p[text() = 'Лента Заказов']")  # Кнопка лента заказов
-    logo_btn = (By.XPATH, ".//div[@class = 'AppHeader_header__logo__2D0X2']")  # Кнопка главной страницы сайта
-    personal_account_btn = (By.XPATH, ".//p[text() = 'Личный Кабинет']")  # Кнопка личного кабинета
 
 
 class PersonalAreaLocators:
@@ -74,7 +70,3 @@ class PersonalAreaLocators:
     exit_btn = (By.XPATH, ".//button[text() = 'Выход']")  # Кнопка выход
     save_btn = (By.XPATH, ".//button[text() = 'Сохранить']")  # Кнопка сохранить
     cansel_btn = (By.XPATH, ".//button[text() = 'Отмена']")  # Кнопка отмена
-    constructor_btn = (By.XPATH, ".//p[text() = 'Конструктор']")  # Кнопка конструктор
-    order_feed_btn = (By.XPATH, ".//p[text() = 'Лента Заказов']")  # Кнопка лента заказов
-    logo_btn = (By.XPATH, ".//div[@class = 'AppHeader_header__logo__2D0X2']")  # Кнопка главной страницы сайта
-    personal_account_btn = (By.XPATH, ".//p[text() = 'Личный Кабинет']")  # Кнопка личного кабинета
